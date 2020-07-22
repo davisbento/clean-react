@@ -17,6 +17,6 @@
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/camelcase": "off",
     "react/jsx-uses-react": "error",
-    "react/jsx-use-vars": "error"
+    "react/jsx-uses-vars": "error"
   }
 }
