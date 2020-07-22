@@ -1,7 +1,7 @@
-const { DefinePlugin } = require('webpack')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const { DefinePlugin } = require('webpack')
+// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const common = require('./webpack.common')
-const merge = require('webpack-merge')
+const { merge } = require('webpack-merge')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -30,13 +30,13 @@ module.exports = merge(common, {
     writeToDisk: true,
     historyApiFallback: true,
     port: 8080
-  },
-  plugins: [
-    new DefinePlugin({
-      'process.env.API_URL': JSON.stringify('http://fordevs.herokuapp.com/api')
-    }),
-    new HtmlWebpackPlugin({
-      template: './template.dev.html'
-    })
-  ]
+  }
+  // plugins: [
+  //   new DefinePlugin({
+  //     'process.env.API_URL': JSON.stringify('http://fordevs.herokuapp.com/api')
+  //   }),
+  //   new HtmlWebpackPlugin({
+  //     template: './template.dev.html'
+  //   })
+  // ]
 })
